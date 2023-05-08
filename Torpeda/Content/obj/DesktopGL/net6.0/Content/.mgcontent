@@ -5,10 +5,18 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/1a648b94-be8f-11e9-a082-8cdcd4b147d4_1200x.jpg</File>
+    <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/backgroundGame.png</File>
     <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/File.spritefont</File>
+    <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/Fire.png</File>
+    <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/Scope.png</File>
+    <File>C:/Users/User/Desktop/база ртф_Returning/вааа/Ulearn 1 и 2 семестры/Torpeda/Torpeda/Torpeda/Content/Ship5.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Menu.jpg</File>
+    <File xsi:nil="true" />
     <File>SplashMenu</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

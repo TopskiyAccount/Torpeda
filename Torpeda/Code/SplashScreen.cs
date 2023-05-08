@@ -21,6 +21,8 @@ static class SplashScreen
     {
         spriteBatch.Draw(menu, new Rectangle(0, 0, 1920, 1080), Color.White);
         spriteBatch.DrawString(Font, "Торпеда!", TextPosition, color);
+        spriteBatch.DrawString(Font, "Нажмите 'Space', чтобы начать игру", new(100, 600), color);
+        spriteBatch.DrawString(Font, "Нажмите 'ContolLeft', чтобы стрелять", new(100, 800), color);
 
     }
 
