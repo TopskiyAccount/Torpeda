@@ -30,3 +30,4 @@ C:\Users\User\Desktop\база ртф_Returning\вааа\Ulearn 1 и 2 семе�
 C:\Users\User\Desktop\база ртф_Returning\вааа\Ulearn 1 и 2 семестры\Torpeda\Torpeda\Torpeda\bin\Debug\net6.0\Content\Scope-PNG-Background-Image (1).xnb
 C:\Users\User\Desktop\база ртф_Returning\вааа\Ulearn 1 и 2 семестры\Torpeda\Torpeda\Torpeda\bin\Debug\net6.0\Content\Scope.xnb
 C:\Users\User\Desktop\база ртф_Returning\вааа\Ulearn 1 и 2 семестры\Torpeda\Torpeda\Torpeda\bin\Debug\net6.0\Content\Fire.xnb
+C:\Users\User\Desktop\база ртф_Returning\вааа\Ulearn 1 и 2 семестры\Torpeda\Torpeda\Torpeda\bin\Debug\net6.0\Content\font.xnb

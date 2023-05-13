@@ -17,7 +17,7 @@ namespace Torpeda
         static List<Fire> fires = new List<Fire>();
         static List<Ship> ships = new List<Ship>();
 
-
+        static public SpriteFont Font { get; set; }
 
         static public Scope Scope { get; set; }
 
@@ -33,6 +33,7 @@ namespace Torpeda
 
         static public void Init(SpriteBatch SpriteBatch, int Wight, int Height)
         {
+
             TorGame.Wight = Wight;
             TorGame.Height = Height;
             TorGame.SpriteBatch = SpriteBatch;
@@ -53,21 +54,19 @@ namespace Torpeda
         {
             foreach (Ship ship in ships)
                 ship.Update();
-            for (int i = 0; i < fires.Count; i++)
+            foreach (Fire fire in fires.ToArray())
             {
-                fires[i].Update();
-                Ship shipCrash = fires[i].Crash(ships);
+                fire.Update();
+                Ship shipCrash = fire.Crash(ships);
                 if (shipCrash != null)
                 {
                     ships.Remove(shipCrash);
-                    fires.RemoveAt(i);
-                    i--;
+                    fires.Remove(fire);
                     continue;
                 }
-                if (fires[i].Hidden)
+                if (fire.Hidden)
                 {
-                    fires.RemoveAt(i);
-                    i--;
+                    fires.Remove(fire);
                 }
             }
         }
@@ -107,7 +106,7 @@ namespace Torpeda
         }
         public void Position()
         {
-            Pos = new Vector2(TorGame.GetIntRnd(TorGame.Wight, TorGame.Wight + 100), TorGame.GetIntRnd(300, 400));
+            Pos = new Vector2(TorGame.GetIntRnd(TorGame.Wight, TorGame.Wight + 100), TorGame.GetIntRnd(350, 450));
             Dir = new Vector2(-(float)TorGame.rnd.NextDouble() * 2 + 0.1f, 0f);
             scale = (float)TorGame.rnd.NextDouble();
             color = Color.White;
@@ -146,6 +145,7 @@ namespace Torpeda
             TorGame.SpriteBatch.Draw(Texture2D, Pos, color);
         }
     }
+
     class Fire
     {
         const int speed = 3;
@@ -171,10 +171,8 @@ namespace Torpeda
 
         public void SetRotation()
         {
-
             Scale = (float)TorGame.GetIntRnd(98, 101) / 100;
             RotationSpeed = (float)(1 / -10);
-
         }
 
         public Ship Crash(List<Ship> ships)
@@ -188,12 +186,11 @@ namespace Torpeda
         {
             get { return Dir.X > TorGame.Wight; }
         }
+
         public void Update()
         {
-
             Pos += Dir;
             Rotation += RotationSpeed;
-
             if (Pos.X < TorGame.Wight)
             {
                 SetRotation();
@@ -202,9 +199,8 @@ namespace Torpeda
                     Scale = (float)TorGame.GetIntRnd(98, 101) / 100;
                 }
             }
-
-
         }
+        
         public void Draw()
         {
             if (Pos.Y > TorGame.Height / 20)
